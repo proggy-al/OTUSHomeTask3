@@ -6,13 +6,10 @@ on:
     branches: [ "master" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
     env:
       working-directory: './homeworks/otus.teaching.promocodefactory.homework.unittests/src'
-
     steps:
     - uses: actions/checkout@v3
     
