@@ -14,7 +14,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      working-directory: './OTUSHomeTask3/otus.teaching.promocodefactory.homework.unittests/src'
+      working-directory: './otus.teaching.promocodefactory.homework.unittests/src'
 
     steps:
     - uses: actions/checkout@v4
