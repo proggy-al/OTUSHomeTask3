@@ -57,7 +57,10 @@ namespace Otus.Teaching.PromoCodeFactory.WebHost.Controllers
 
             if (partner == null)
                 return NotFound();
-            
+
+            if (!partner.IsActive) 
+                return BadRequest("Данный партнер не активен");
+
             var limit = partner.PartnerLimits
                 .FirstOrDefault(x => x.Id == limitId);
 
