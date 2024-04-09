@@ -14,17 +14,17 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: Set up .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '8.x'
-          include-prerelease: true
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '8.x'
+        include-prerelease: true
 
-      - run: pwd
-        working-directory: ${{env.working-directory}}
+    - run: pwd
+      working-directory: ${{env.working-directory}}
 
-      - run: dotnet build  Otus.Teaching.PromoCodeFactory.UnitTests 
-        working-directory: ${{env.working-directory}}
+    - run: dotnet build  Otus.Teaching.PromoCodeFactory.UnitTests 
+      working-directory: ${{env.working-directory}}
 
         
-      - run: dotnet test  Otus.Teaching.PromoCodeFactory.UnitTests --verbosity normal --no-build
-        working-directory: ${{env.working-directory}}
+    - run: dotnet test  Otus.Teaching.PromoCodeFactory.UnitTests --verbosity normal --no-build
+      working-directory: ${{env.working-directory}}
